@@ -1,0 +1,59 @@
+Othello Judge Version 2.0
+
+Works fine on ubuntu and Redhat.
+
+Requirements:
+-JRE(Java Runtime Environment)
+-gcc/g++
+
+
+HOW TO RUN :
+1.Extract the file and change directory to extracted folder.
+$ cd othello_v2.0
+
+2.Compile your code.
+
+3.Run the shell script run.sh
+bash run.sh './path_of_player1_objectfile' './path_of_player2_objectfile'
+
+e.g.
+$ cd othello_v2.0
+$ g++ sample_player.cpp -o player1
+$ g++ sample_player_again.cpp -o player2
+$ g++ client.cpp -o client
+$ bash run.sh './player1' './player2'
+
+After few seconds you will be able to see window of our Judge showing the game.
+Finally you can check the moves played during the game in Moves_out file in the same folder.
+
+
+In case their is some problem with the judge, try killing these processe then rerunning it.
+java
+client
+<name_of_player1_objectfile>
+<name_of_player2_objectfile>
+
+If you want to play a match on LAN then :
+
+Host the server using :
+$ java Main
+Now on each client's(player's/coder's) computer do :
+$ ./client './name_of_player's_objectfile' <IP_address_of_server>
+
+This judge is not tested for Global IP. Just hope that it does work .
+
+
+Finally , to compile judge's code use Makefile :
+$ make
+
+This is an open source code. Use it as you wish.
+
+Extended and revised by: Manish Patel
+
+
+Original work:
+	Uday Jalan
+	Anshul Goyal
+	Abhishek Shukla
+	Piyush Arya
+	Sankalp Srivastava
